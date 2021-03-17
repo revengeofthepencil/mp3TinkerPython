@@ -51,6 +51,7 @@ def copyFilesAndConvert(dirName, outFolder):
                 tags['date'] = audio.year
                 tags['disc'] = audio.disc
                 tags['genre'] = audio.genre
+                tags['track'] = audio.track
                 tags['disc_total'] = audio.disc_total
 
 
@@ -59,6 +60,8 @@ def copyFilesAndConvert(dirName, outFolder):
                 print("Title:" + audio.title) 
                 print("Album: " + audio.album) 
                 print("Artist: " + tags['artist'] ) 
+                if(audio.track != None):
+                    print("Track:" + audio.track) 
                 if(audio.genre != None):
                     print("Genre:" + audio.genre) 
                 if(audio.year != None):
